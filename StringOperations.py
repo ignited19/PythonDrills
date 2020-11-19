@@ -1,4 +1,4 @@
- StringOperations(object):
+class StringOperations(object):
 
     #=======================================================
     # The purpose of this function is to determine if a
@@ -82,7 +82,10 @@
            
             return NumberOfDifferences <= 1
         
-        #Check to see how many characters needs to be added or removed
+         #====================================================
+         # Check to see the amount of character differences 
+         # between to strings
+         #====================================================
         def InsertCheck():
             StringUpperLimit_A = len(String_A)
             StringUpperLimit_B = len(String_B)
@@ -112,3 +115,33 @@
 
         print("Magic computer, tell us do these two strings containt no more than 1 char difference? " + str(Result))
         
+
+    #================================================
+    # Function: Compress strings i.e aabb = a2b2 to
+    # view how much a speicific character there is in
+    # the string
+    #===============================================
+    def StringCompression():
+        User_Str = input("Lets compress a string! Please enter in a string")
+        CharCount = {}
+   
+        for x in User_Str:
+            if x not in CharCount:
+                CharCount[x] = User_Str.count(x)
+        
+        print(CharCount)
+            
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
